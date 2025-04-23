@@ -1,0 +1,104 @@
+{
+  "10k": {
+    "5:00": {
+      "3": [
+        {
+          "week": 1,
+          "run1": "4K easy @ 6:00/km",
+          "run2": "4x400m @ 4:45/km (1:30 rest)",
+          "run3": "6K long @ 6:15/km"
+        },
+        {
+          "week": 2,
+          "run1": "5K easy @ 6:00/km",
+          "run2": "5x400m @ 4:45/km (1:30 rest)",
+          "run3": "7K long @ 6:15/km"
+        },
+        {
+          "week": 3,
+          "run1": "5K easy @ 6:00/km",
+          "run2": "3K tempo @ 5:15/km",
+          "run3": "8K long @ 6:15/km"
+        },
+        {
+          "week": 4,
+          "run1": "4K easy @ 6:15/km",
+          "run2": "4x200m @ 4:30/km (1:00 rest)",
+          "run3": "6K long @ 6:30/km"
+        },
+        {
+          "week": 5,
+          "run1": "5K easy @ 6:00/km",
+          "run2": "6x400m @ 4:45/km",
+          "run3": "9K long @ 6:15/km"
+        },
+        {
+          "week": 6,
+          "run1": "6K easy @ 6:00/km",
+          "run2": "3x800m @ 4:45/km",
+          "run3": "10K long @ 6:15/km"
+        },
+        {
+          "week": 7,
+          "run1": "5K easy @ 6:00/km",
+          "run2": "4K tempo @ 5:15/km",
+          "run3": "11K long @ 6:15/km"
+        },
+        {
+          "week": 8,
+          "run1": "5K easy @ 6:15/km",
+          "run2": "6x200m @ 4:30/km",
+          "run3": "8K long @ 6:30/km"
+        },
+        {
+          "week": 9,
+          "run1": "6K easy @ 6:00/km",
+          "run2": "4x800m @ 4:45/km",
+          "run3": "12K long @ 6:15/km"
+        },
+        {
+          "week": 10,
+          "run1": "6K easy @ 6:00/km",
+          "run2": "5K tempo @ 5:15/km",
+          "run3": "12K long @ 6:15/km"
+        },
+        {
+          "week": 11,
+          "run1": "5K easy @ 6:00/km",
+          "run2": "5x600m @ 4:40/km",
+          "run3": "13K long @ 6:15/km"
+        },
+        {
+          "week": 12,
+          "run1": "5K easy @ 6:15/km",
+          "run2": "4x400m @ 4:30/km",
+          "run3": "9K long @ 6:30/km"
+        },
+        {
+          "week": 13,
+          "run1": "6K easy @ 6:00/km",
+          "run2": "6x800m @ 4:45/km",
+          "run3": "13K long @ 6:15/km"
+        },
+        {
+          "week": 14,
+          "run1": "5K easy @ 6:00/km",
+          "run2": "6K tempo @ 5:15/km",
+          "run3": "10K long @ 6:15/km"
+        },
+        {
+          "week": 15,
+          "run1": "4K easy @ 6:15/km",
+          "run2": "3x400m @ 4:30/km",
+          "run3": "7K long @ 6:30/km"
+        },
+        {
+          "week": 16,
+          "run1": "3K easy @ 6:15/km",
+          "run2": "2K tempo @ 5:15/km",
+          "run3": "Race week \u2013 10K!"
+        }
+      ]
+    }
+  }
+}
