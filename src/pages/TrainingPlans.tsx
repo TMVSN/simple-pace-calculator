@@ -1,13 +1,20 @@
 import React, { useState } from 'react';
-import trainingPlansData from '../../training_plans.json';
+import trainingPlansData from '../../training_plans_plus.json';
 import { useTrainingPlanForm } from '../hooks/useTrainingPlanForm';
-import { TrainingPlanDisplay } from '../components/TrainingPlanDisplay';
+import TrainingPlanDisplay from '../components/TrainingPlanDisplay';
+
+interface Training {
+  session: string;
+  description: string;
+  terrain: string;
+}
 
 interface TrainingWeek {
   week: number;
-  run1: string;
-  run2: string;
-  run3: string;
+  phase: string;
+  run1: Training;
+  run2: Training;
+  run3: Training;
 }
 
 interface TrainingPlanData {

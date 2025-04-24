@@ -1,98 +1,89 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronRight } from 'lucide-react';
+import PhaseGroup from './PhaseGroup';
+
+interface Training {
+  session: string;
+  description: string;
+  terrain: string;
+}
 
 interface TrainingWeek {
   week: number;
-  run1: string;
-  run2: string;
-  run3: string;
+  phase: string;
+  run1: Training;
+  run2: Training;
+  run3: Training;
 }
 
-interface TrainingPlanDisplayProps {
+interface Props {
   trainingPlan: TrainingWeek[];
   raceDate: string;
   fullWeeksBeforeRace: number;
 }
 
-export const TrainingPlanDisplay: React.FC<TrainingPlanDisplayProps> = ({
+const TrainingPlanDisplay: React.FC<Props> = ({
   trainingPlan,
   raceDate,
   fullWeeksBeforeRace,
 }) => {
-  const [expandedWeeks, setExpandedWeeks] = useState<number[]>([]);
+  const [allPhasesExpanded, setAllPhasesExpanded] = useState(true);
+  const [allWeeksExpanded, setAllWeeksExpanded] = useState(true);
 
-  // Calculate the relevant weeks from the training plan
-  // If fullWeeksBeforeRace is greater than the plan length, use the entire plan
+  // Calculate which weeks to show based on fullWeeksBeforeRace
   const weeksToShow = Math.min(fullWeeksBeforeRace, trainingPlan.length);
-  const relevantWeeks = trainingPlan
-    .slice(-weeksToShow)
-    .map((week, index) => ({
-      ...week,
-      actualWeek: weeksToShow - index,
-    }));
+  const relevantWeeks = trainingPlan.slice(-weeksToShow);
 
-  // Calculate Monday dates for each week
+  // Calculate dates for each week
   const raceDateObj = new Date(raceDate);
   const weekDates = relevantWeeks.map((week) => {
     const date = new Date(raceDateObj);
-    date.setDate(date.getDate() - (week.actualWeek * 7));
-    // Get to Monday
+    date.setDate(date.getDate() - (week.week * 7));
+    // Get to Monday of that week
     const day = date.getDay();
     const diff = date.getDate() - day + (day === 0 ? -6 : 1);
     date.setDate(diff);
     return date;
   });
 
-  const toggleWeek = (weekNumber: number) => {
-    setExpandedWeeks((prev) =>
-      prev.includes(weekNumber)
-        ? prev.filter((w) => w !== weekNumber)
-        : [...prev, weekNumber]
-    );
-  };
-
-  const formatDate = (date: Date) => {
-    return date.toLocaleDateString('en-GB', {
-      day: '2-digit',
-      month: '2-digit',
-      year: 'numeric',
+  // Group the relevant weeks by phase
+  const relevantWeeksByPhase = relevantWeeks.reduce((acc, week, index) => {
+    if (!acc[week.phase]) {
+      acc[week.phase] = [];
+    }
+    acc[week.phase].push({
+      ...week,
+      startDate: weekDates[index]
     });
-  };
-
-  if (weeksToShow < 4) {
-    return (
-      <div className="text-red-600 p-4 bg-red-50 rounded-lg">
-        The selected race date is too close. Please select a date at least 4 weeks away.
-      </div>
-    );
-  }
+    return acc;
+  }, {} as { [key: string]: (TrainingWeek & { startDate: Date })[] });
 
   return (
-    <div className="space-y-2">
-      {relevantWeeks.map((week, index) => (
-        <div key={week.week} className="border rounded-lg overflow-hidden">
-          <button
-            onClick={() => toggleWeek(week.week)}
-            className="w-full px-4 py-2 bg-gray-50 hover:bg-gray-100 flex items-center justify-between text-left"
-          >
-            <span className="font-medium">
-              {formatDate(weekDates[index])} - Race in {week.actualWeek} weeks
-            </span>
-            {expandedWeeks.includes(week.week) ? (
-              <ChevronDown className="h-5 w-5 text-gray-500" />
-            ) : (
-              <ChevronRight className="h-5 w-5 text-gray-500" />
-            )}
-          </button>
-          {expandedWeeks.includes(week.week) && (
-            <div className="px-4 py-2 space-y-2 bg-white">
-              <div className="text-gray-600">{week.run1}</div>
-              <div className="text-gray-600">{week.run2}</div>
-              <div className="text-gray-600">{week.run3}</div>
-            </div>
-          )}
-        </div>
+    <div>
+      <div className="mb-6 flex gap-4">
+        <button
+          onClick={() => setAllPhasesExpanded(!allPhasesExpanded)}
+          className="px-4 py-2 bg-purple-100 hover:bg-purple-200 rounded-lg text-purple-800 font-medium transition-colors"
+        >
+          {allPhasesExpanded ? 'Collapse' : 'Expand'} All Phases
+        </button>
+        <button
+          onClick={() => setAllWeeksExpanded(!allWeeksExpanded)}
+          className="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-gray-800 font-medium transition-colors"
+        >
+          {allWeeksExpanded ? 'Collapse' : 'Expand'} All Weeks
+        </button>
+      </div>
+      {Object.entries(relevantWeeksByPhase).map(([phase, weeks]) => (
+        <PhaseGroup 
+          key={phase} 
+          phase={phase} 
+          weeks={weeks}
+          isExpanded={allPhasesExpanded}
+          areWeeksExpanded={allWeeksExpanded}
+        />
       ))}
     </div>
   );
-}; 
+};
+
+export default TrainingPlanDisplay; 

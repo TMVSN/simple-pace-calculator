@@ -1,0 +1,312 @@
+{
+  "10k": {
+    "5:00": {
+      "3": [
+        {
+          "week": 1,
+          "phase": "Base endurance",
+          "run1": {
+            "session": "40 min easy run",
+            "description": "Relaxed session to build aerobic endurance. Keep it conversational and easy.",
+            "terrain": "road"
+          },
+          "run2": {
+            "session": "3x800m @ 4:50/km (2 min rest)",
+            "description": "Interval training to improve your VO2 max. Push during the work intervals but stay controlled.",
+            "terrain": "track"
+          },
+          "run3": {
+            "session": "50 min long run",
+            "description": "A longer effort to build stamina. Don't focus on speed, just cover the distance at a steady pace.",
+            "terrain": "road or trail"
+          }
+        },
+        {
+          "week": 2,
+          "phase": "Base endurance",
+          "run1": {
+            "session": "45 min easy run",
+            "description": "Relaxed session to build aerobic endurance. Keep it conversational and easy.",
+            "terrain": "road"
+          },
+          "run2": {
+            "session": "4x600m @ 4:45/km (1:30 rest)",
+            "description": "Interval training to improve your VO2 max. Push during the work intervals but stay controlled.",
+            "terrain": "track"
+          },
+          "run3": {
+            "session": "55 min long run",
+            "description": "A longer effort to build stamina. Don't focus on speed, just cover the distance at a steady pace.",
+            "terrain": "road or trail"
+          }
+        },
+        {
+          "week": 3,
+          "phase": "Base endurance",
+          "run1": {
+            "session": "50 min easy run",
+            "description": "Relaxed session to build aerobic endurance. Keep it conversational and easy.",
+            "terrain": "road"
+          },
+          "run2": {
+            "session": "5x400m @ 4:40/km (1:30 rest)",
+            "description": "Interval training to improve your VO2 max. Push during the work intervals but stay controlled.",
+            "terrain": "track"
+          },
+          "run3": {
+            "session": "60 min long run",
+            "description": "A longer effort to build stamina. Don't focus on speed, just cover the distance at a steady pace.",
+            "terrain": "road or trail"
+          }
+        },
+        {
+          "week": 4,
+          "phase": "Base endurance",
+          "run1": {
+            "session": "50 min easy run",
+            "description": "Relaxed session to build aerobic endurance. Keep it conversational and easy.",
+            "terrain": "road"
+          },
+          "run2": {
+            "session": "4x800m @ 4:45/km (2 min rest)",
+            "description": "Interval training to improve your VO2 max. Push during the work intervals but stay controlled.",
+            "terrain": "track"
+          },
+          "run3": {
+            "session": "65 min long run",
+            "description": "A longer effort to build stamina. Don't focus on speed, just cover the distance at a steady pace.",
+            "terrain": "road or trail"
+          }
+        },
+        {
+          "week": 5,
+          "phase": "VO2max",
+          "run1": {
+            "session": "45 min easy run",
+            "description": "Relaxed session to build aerobic endurance. Keep it conversational and easy.",
+            "terrain": "road"
+          },
+          "run2": {
+            "session": "6x400m @ 4:30/km (1:30 rest)",
+            "description": "Interval training to improve your VO2 max. Push during the work intervals but stay controlled.",
+            "terrain": "track"
+          },
+          "run3": {
+            "session": "60 min long run",
+            "description": "A longer effort to build stamina. Don't focus on speed, just cover the distance at a steady pace.",
+            "terrain": "road or trail"
+          }
+        },
+        {
+          "week": 6,
+          "phase": "VO2max",
+          "run1": {
+            "session": "40 min easy run",
+            "description": "Relaxed session to build aerobic endurance. Keep it conversational and easy.",
+            "terrain": "road"
+          },
+          "run2": {
+            "session": "4x600m @ 4:35/km (1:30 rest)",
+            "description": "Interval training to improve your VO2 max. Push during the work intervals but stay controlled.",
+            "terrain": "track"
+          },
+          "run3": {
+            "session": "50 min long run",
+            "description": "A longer effort to build stamina. Don't focus on speed, just cover the distance at a steady pace.",
+            "terrain": "road or trail"
+          }
+        },
+        {
+          "week": 7,
+          "phase": "Race pace",
+          "run1": {
+            "session": "40 min easy run",
+            "description": "Relaxed session to build aerobic endurance. Keep it conversational and easy.",
+            "terrain": "road"
+          },
+          "run2": {
+            "session": "5x400m @ 4:40/km (1:30 rest)",
+            "description": "Interval training to improve your VO2 max. Push during the work intervals but stay controlled.",
+            "terrain": "track"
+          },
+          "run3": {
+            "session": "50 min long run",
+            "description": "A longer effort to build stamina. Don't focus on speed, just cover the distance at a steady pace.",
+            "terrain": "road or trail"
+          }
+        },
+        {
+          "week": 8,
+          "phase": "Race pace",
+          "run1": {
+            "session": "40 min easy run",
+            "description": "Relaxed session to build aerobic endurance. Keep it conversational and easy.",
+            "terrain": "road"
+          },
+          "run2": {
+            "session": "5x400m @ 4:40/km (1:30 rest)",
+            "description": "Interval training to improve your VO2 max. Push during the work intervals but stay controlled.",
+            "terrain": "track"
+          },
+          "run3": {
+            "session": "50 min long run",
+            "description": "A longer effort to build stamina. Don't focus on speed, just cover the distance at a steady pace.",
+            "terrain": "road or trail"
+          }
+        },
+        {
+          "week": 9,
+          "phase": "Race pace",
+          "run1": {
+            "session": "40 min easy run",
+            "description": "Relaxed session to build aerobic endurance. Keep it conversational and easy.",
+            "terrain": "road"
+          },
+          "run2": {
+            "session": "5x400m @ 4:40/km (1:30 rest)",
+            "description": "Interval training to improve your VO2 max. Push during the work intervals but stay controlled.",
+            "terrain": "track"
+          },
+          "run3": {
+            "session": "50 min long run",
+            "description": "A longer effort to build stamina. Don't focus on speed, just cover the distance at a steady pace.",
+            "terrain": "road or trail"
+          }
+        },
+        {
+          "week": 10,
+          "phase": "Race pace",
+          "run1": {
+            "session": "40 min easy run",
+            "description": "Relaxed session to build aerobic endurance. Keep it conversational and easy.",
+            "terrain": "road"
+          },
+          "run2": {
+            "session": "5x400m @ 4:40/km (1:30 rest)",
+            "description": "Interval training to improve your VO2 max. Push during the work intervals but stay controlled.",
+            "terrain": "track"
+          },
+          "run3": {
+            "session": "50 min long run",
+            "description": "A longer effort to build stamina. Don't focus on speed, just cover the distance at a steady pace.",
+            "terrain": "road or trail"
+          }
+        },
+        {
+          "week": 11,
+          "phase": "Race pace",
+          "run1": {
+            "session": "40 min easy run",
+            "description": "Relaxed session to build aerobic endurance. Keep it conversational and easy.",
+            "terrain": "road"
+          },
+          "run2": {
+            "session": "5x400m @ 4:40/km (1:30 rest)",
+            "description": "Interval training to improve your VO2 max. Push during the work intervals but stay controlled.",
+            "terrain": "track"
+          },
+          "run3": {
+            "session": "50 min long run",
+            "description": "A longer effort to build stamina. Don't focus on speed, just cover the distance at a steady pace.",
+            "terrain": "road or trail"
+          }
+        },
+        {
+          "week": 12,
+          "phase": "Race pace",
+          "run1": {
+            "session": "40 min easy run",
+            "description": "Relaxed session to build aerobic endurance. Keep it conversational and easy.",
+            "terrain": "road"
+          },
+          "run2": {
+            "session": "5x400m @ 4:40/km (1:30 rest)",
+            "description": "Interval training to improve your VO2 max. Push during the work intervals but stay controlled.",
+            "terrain": "track"
+          },
+          "run3": {
+            "session": "50 min long run",
+            "description": "A longer effort to build stamina. Don't focus on speed, just cover the distance at a steady pace.",
+            "terrain": "road or trail"
+          }
+        },
+        {
+          "week": 13,
+          "phase": "Peak speed",
+          "run1": {
+            "session": "40 min easy run",
+            "description": "Relaxed session to build aerobic endurance. Keep it conversational and easy.",
+            "terrain": "road"
+          },
+          "run2": {
+            "session": "5x400m @ 4:40/km (1:30 rest)",
+            "description": "Interval training to improve your VO2 max. Push during the work intervals but stay controlled.",
+            "terrain": "track"
+          },
+          "run3": {
+            "session": "50 min long run",
+            "description": "A longer effort to build stamina. Don't focus on speed, just cover the distance at a steady pace.",
+            "terrain": "road or trail"
+          }
+        },
+        {
+          "week": 14,
+          "phase": "Race pace",
+          "run1": {
+            "session": "40 min easy run",
+            "description": "Relaxed session to build aerobic endurance. Keep it conversational and easy.",
+            "terrain": "road"
+          },
+          "run2": {
+            "session": "5x400m @ 4:40/km (1:30 rest)",
+            "description": "Interval training to improve your VO2 max. Push during the work intervals but stay controlled.",
+            "terrain": "track"
+          },
+          "run3": {
+            "session": "50 min long run",
+            "description": "A longer effort to build stamina. Don't focus on speed, just cover the distance at a steady pace.",
+            "terrain": "road or trail"
+          }
+        },
+        {
+          "week": 15,
+          "phase": "Tapering",
+          "run1": {
+            "session": "40 min easy run",
+            "description": "Relaxed session to build aerobic endurance. Keep it conversational and easy.",
+            "terrain": "road"
+          },
+          "run2": {
+            "session": "5x400m @ 4:40/km (1:30 rest)",
+            "description": "Interval training to improve your VO2 max. Push during the work intervals but stay controlled.",
+            "terrain": "track"
+          },
+          "run3": {
+            "session": "50 min long run",
+            "description": "A longer effort to build stamina. Don't focus on speed, just cover the distance at a steady pace.",
+            "terrain": "road or trail"
+          }
+        },
+        {
+          "week": 16,
+          "phase": "Tapering",
+          "run1": {
+            "session": "40 min easy run",
+            "description": "Relaxed session to build aerobic endurance. Keep it conversational and easy.",
+            "terrain": "road"
+          },
+          "run2": {
+            "session": "5x400m @ 4:40/km (1:30 rest)",
+            "description": "Interval training to improve your VO2 max. Push during the work intervals but stay controlled.",
+            "terrain": "track"
+          },
+          "run3": {
+            "session": "50 min long run",
+            "description": "A longer effort to build stamina. Don't focus on speed, just cover the distance at a steady pace.",
+            "terrain": "road or trail"
+          }
+        }
+      ]
+    }
+  }
+}

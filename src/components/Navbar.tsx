@@ -14,7 +14,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, onSectionChange }) => {
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
               <span className="text-xl font-bold text-blue-600">Pace Calculator</span>
-            </div>
+        </div>
             <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
               <button
                 onClick={() => onSectionChange('calculators')}
