@@ -62,104 +62,104 @@ const TrainingPlans: React.FC = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-4 text-white">Training Plans</h1>
+      <h1 className="text-3xl font-bold mb-4 text-purple-100">Training Plans</h1>
 
-      <form onSubmit={handleSubmit} className="mb-8 bg-white rounded-lg shadow-md p-6">
+      <form onSubmit={handleSubmit} className="mb-8 bg-gray-800 rounded-lg shadow-md p-6">
         <div className="mb-4">
-          <label htmlFor="race" className="block text-sm font-medium text-gray-700 mb-2">Race</label>
+          <label htmlFor="race" className="block text-sm font-medium text-gray-300 mb-2">Race</label>
           <select
             id="race"
             value={formState.race}
             onChange={(e) => handleInputChange('race', e.target.value)}
-            className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
-              formState.errors.race ? 'border-red-500' : ''
+            className={`shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 ${
+              formState.errors.race ? 'border-red-500' : 'border-gray-600'
             }`}
           >
             <option value="" disabled>Select a distance</option>
             {races.map((r) => (
-              <option key={r} value={r}>
+              <option key={r} value={r} className="bg-gray-700">
                 {r}
               </option>
             ))}
           </select>
           {formState.errors.race && (
-            <p className="text-red-500 text-xs italic mt-1">{formState.errors.race}</p>
+            <p className="text-red-400 text-xs italic mt-1">{formState.errors.race}</p>
           )}
         </div>
 
         <div className="mb-4">
-          <label htmlFor="trainingsPerWeek" className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor="trainingsPerWeek" className="block text-sm font-medium text-gray-300 mb-2">
             Trainings/Week
           </label>
           <select
             id="trainingsPerWeek"
             value={formState.trainingsPerWeek}
             onChange={(e) => handleInputChange('trainingsPerWeek', e.target.value)}
-            className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
-              formState.errors.trainingsPerWeek ? 'border-red-500' : ''
+            className={`shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 ${
+              formState.errors.trainingsPerWeek ? 'border-red-500' : 'border-gray-600'
             }`}
           >
             <option value="" disabled>How many runs will you do per week?</option>
             {trainingsOptions.map((t) => (
-              <option key={t} value={t}>
+              <option key={t} value={t} className="bg-gray-700">
                 {t}
               </option>
             ))}
           </select>
           {formState.errors.trainingsPerWeek && (
-            <p className="text-red-500 text-xs italic mt-1">{formState.errors.trainingsPerWeek}</p>
+            <p className="text-red-400 text-xs italic mt-1">{formState.errors.trainingsPerWeek}</p>
           )}
         </div>
 
         <div className="mb-4">
-          <label htmlFor="targetPace" className="block text-sm font-medium text-gray-700 mb-2">Target Pace</label>
+          <label htmlFor="targetPace" className="block text-sm font-medium text-gray-300 mb-2">Target Pace</label>
           <select
             id="targetPace"
             value={formState.targetPace}
             onChange={(e) => handleInputChange('targetPace', e.target.value)}
-            className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
-              formState.errors.targetPace ? 'border-red-500' : ''
+            className={`shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 ${
+              formState.errors.targetPace ? 'border-red-500' : 'border-gray-600'
             }`}
           >
             <option value="" disabled>Select a pace</option>
             {paceOptions.map((p) => (
-              <option key={p} value={p}>
+              <option key={p} value={p} className="bg-gray-700">
                 {p}
               </option>
             ))}
           </select>
           {formState.errors.targetPace && (
-            <p className="text-red-500 text-xs italic mt-1">{formState.errors.targetPace}</p>
+            <p className="text-red-400 text-xs italic mt-1">{formState.errors.targetPace}</p>
           )}
         </div>
 
         <div className="mb-4">
-          <label htmlFor="raceDate" className="block text-sm font-medium text-gray-700 mb-2">Race Date</label>
+          <label htmlFor="raceDate" className="block text-sm font-medium text-gray-300 mb-2">Race Date</label>
           <input
             type="date"
             id="raceDate"
             value={formState.raceDate}
             onChange={(e) => handleInputChange('raceDate', e.target.value)}
-            className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
-              formState.errors.raceDate ? 'border-red-500' : ''
+            className={`shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 ${
+              formState.errors.raceDate ? 'border-red-500' : 'border-gray-600'
             }`}
           />
-          <p className="text-sm mt-1 text-gray-600">Current Date: {currentDate}</p>
+          <p className="text-sm mt-1 text-gray-400">Current Date: {currentDate}</p>
           {formState.weeksBeforeRace !== null && (
-            <p className="text-sm mt-1 text-gray-600">Weeks Before Race: {formState.weeksBeforeRace}</p>
+            <p className="text-sm mt-1 text-gray-400">Weeks Before Race: {formState.weeksBeforeRace}</p>
           )}
           {formState.fullWeeksBeforeRace !== null && (
-            <p className="text-sm mt-1 text-gray-600">Full weeks before race: {formState.fullWeeksBeforeRace}</p>
+            <p className="text-sm mt-1 text-gray-400">Full weeks before race: {formState.fullWeeksBeforeRace}</p>
           )}
           {formState.errors.raceDate && (
-            <p className="text-red-500 text-xs italic mt-1">{formState.errors.raceDate}</p>
+            <p className="text-red-400 text-xs italic mt-1">{formState.errors.raceDate}</p>
           )}
         </div>
 
         <button
           type="submit"
           disabled={!isValid}
-          className={`w-full bg-purple-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ${
+          className={`w-full bg-purple-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-purple-500 ${
             !isValid ? 'opacity-50 cursor-not-allowed' : 'hover:bg-purple-700'
           }`}
         >
@@ -168,8 +168,8 @@ const TrainingPlans: React.FC = () => {
       </form>
 
       {trainingPlan && formState.fullWeeksBeforeRace && (
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-xl font-bold mb-4">Your Training Plan</h2>
+        <div className="bg-gray-800 rounded-lg shadow-md p-6">
+          <h2 className="text-xl font-bold mb-4 text-purple-100">Your Training Plan</h2>
           <TrainingPlanDisplay
             trainingPlan={trainingPlan}
             raceDate={formState.raceDate}
