@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import trainingPlansData from '../../training_plans_plus.json';
+import React, { useState, useEffect } from 'react';
+import trainingPlansData from '../../training_plans_plus_full.json';
 import { useTrainingPlanForm } from '../hooks/useTrainingPlanForm';
 import TrainingPlanDisplay from '../components/TrainingPlanDisplay';
 
@@ -33,6 +33,17 @@ const TrainingPlans: React.FC = () => {
     currentDate
   } = useTrainingPlanForm();
   const [trainingPlan, setTrainingPlan] = useState<TrainingWeek[] | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  // Add debug logging
+  useEffect(() => {
+    try {
+      console.log('Training plans data:', trainingPlansData);
+    } catch (err) {
+      console.error('Error loading training plans:', err);
+      setError('Failed to load training plans data');
+    }
+  }, []);
 
   const races = ['5k', '10k', 'Half Marathon', 'Marathon'];
   const trainingsOptions = ['2', '3', '4', '5'];
@@ -54,11 +65,35 @@ const TrainingPlans: React.FC = () => {
     e.preventDefault();
     if (!isValid) return;
 
-    // Fetch training plan based on selected parameters
-    const typedTrainingData = trainingPlansData as TrainingPlanData;
-    const plan = typedTrainingData[formState.race]?.[formState.targetPace]?.[formState.trainingsPerWeek];
-    setTrainingPlan(plan || null);
+    try {
+      // Fetch training plan based on selected parameters
+      const typedTrainingData = trainingPlansData as TrainingPlanData;
+      console.log('Selected race:', formState.race);
+      console.log('Selected pace:', formState.targetPace);
+      console.log('Selected trainings per week:', formState.trainingsPerWeek);
+      console.log('Available data:', typedTrainingData);
+      
+      const plan = typedTrainingData[formState.race]?.[formState.targetPace]?.[formState.trainingsPerWeek];
+      console.log('Found plan:', plan);
+      
+      setTrainingPlan(plan || null);
+      setError(null);
+    } catch (err) {
+      console.error('Error fetching training plan:', err);
+      setError('Failed to fetch training plan');
+    }
   };
+
+  if (error) {
+    return (
+      <div className="container mx-auto px-4 py-8">
+        <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+          <strong className="font-bold">Error: </strong>
+          <span className="block sm:inline">{error}</span>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="container mx-auto px-4 py-8">
