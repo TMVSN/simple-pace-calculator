@@ -12,7 +12,7 @@ interface TrainingWeek {
   phase: string;
   run1: Training;
   run2: Training;
-  run3: Training;
+  run3?: Training;
 }
 
 interface Props {
@@ -62,26 +62,29 @@ const TrainingPlanDisplay: React.FC<Props> = ({
       <div className="mb-6 flex gap-4">
         <button
           onClick={() => setAllPhasesExpanded(!allPhasesExpanded)}
-          className="px-4 py-2 bg-purple-100 hover:bg-purple-200 rounded-lg text-purple-800 font-medium transition-colors"
+          className="px-4 py-2 bg-purple-100 hover:bg-purple-200 text-purple-800 rounded-md transition-colors"
         >
-          {allPhasesExpanded ? 'Collapse' : 'Expand'} All Phases
+          {allPhasesExpanded ? 'Collapse All Phases' : 'Expand All Phases'}
         </button>
         <button
           onClick={() => setAllWeeksExpanded(!allWeeksExpanded)}
-          className="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-gray-800 font-medium transition-colors"
+          className="px-4 py-2 bg-purple-100 hover:bg-purple-200 text-purple-800 rounded-md transition-colors"
         >
-          {allWeeksExpanded ? 'Collapse' : 'Expand'} All Weeks
+          {allWeeksExpanded ? 'Collapse All Weeks' : 'Expand All Weeks'}
         </button>
       </div>
-      {Object.entries(relevantWeeksByPhase).map(([phase, weeks]) => (
-        <PhaseGroup 
-          key={phase} 
-          phase={phase} 
-          weeks={weeks}
-          isExpanded={allPhasesExpanded}
-          areWeeksExpanded={allWeeksExpanded}
-        />
-      ))}
+
+      <div className="space-y-6">
+        {Object.entries(relevantWeeksByPhase).map(([phase, weeks]) => (
+          <PhaseGroup
+            key={phase}
+            phase={phase}
+            weeks={weeks}
+            allPhasesExpanded={allPhasesExpanded}
+            allWeeksExpanded={allWeeksExpanded}
+          />
+        ))}
+      </div>
     </div>
   );
 };
