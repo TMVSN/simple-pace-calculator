@@ -13,7 +13,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, onSectionChange }) => {
   const navItems: { id: NavSection; label: string }[] = [
     { id: 'calculators', label: 'Calculators' },
     { id: 'plans', label: 'Training Plans' },
-    { id: 'tips', label: 'Tips' },
+    { id: 'tips', label: 'Training Tips' },
     { id: 'blog', label: 'Blog' },
     { id: 'about', label: 'About' },
   ];
